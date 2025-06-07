@@ -6,45 +6,22 @@ interface SectorBreadcrumbProps {
   company: string
 }
 
-export function SectorBreadcrumb({ sector, company }: SectorBreadcrumbProps) {
-  // Generate slugs
-  const sectorSlug = sector.toLowerCase().replace(/\s+/g, "-")
-  const companySlug = company.toLowerCase().replace(/\s+/g, "-")
-
+export default function SectorBreadcrumb({ sector, company }: SectorBreadcrumbProps) {
   return (
-    <nav className="flex" aria-label="Breadcrumb">
-      <ol className="inline-flex items-center space-x-1 md:space-x-3">
-        <li className="inline-flex items-center">
-          <Link href="/" className="text-white hover:text-gray-200 text-sm font-medium">
-            Inicio
-          </Link>
-        </li>
-        <li>
-          <div className="flex items-center">
-            <ChevronRight className="w-4 h-4 text-white" />
-            <Link href="/sectores-estrategicos" className="ml-1 text-white hover:text-gray-200 text-sm font-medium">
-              Sectores Estratégicos
-            </Link>
-          </div>
-        </li>
-        <li>
-          <div className="flex items-center">
-            <ChevronRight className="w-4 h-4 text-white" />
-            <Link
-              href={`/sectores-estrategicos/${sectorSlug}`}
-              className="ml-1 text-white hover:text-gray-200 text-sm font-medium"
-            >
-              {sector}
-            </Link>
-          </div>
-        </li>
-        <li aria-current="page">
-          <div className="flex items-center">
-            <ChevronRight className="w-4 h-4 text-white" />
-            <span className="ml-1 text-gray-300 text-sm font-medium">{company}</span>
-          </div>
-        </li>
-      </ol>
+    <nav className="flex items-center space-x-2 text-white/80 text-sm">
+      <Link href="/" className="hover:text-white">
+        Inicio
+      </Link>
+      <ChevronRight className="h-4 w-4" />
+      <Link href="/sectores-estrategicos" className="hover:text-white">
+        Sectores Estratégicos
+      </Link>
+      <ChevronRight className="h-4 w-4" />
+      <Link href={`/sectores-estrategicos/${sector.toLowerCase()}`} className="hover:text-white">
+        {sector}
+      </Link>
+      <ChevronRight className="h-4 w-4" />
+      <span className="text-white font-medium">{company}</span>
     </nav>
   )
 }

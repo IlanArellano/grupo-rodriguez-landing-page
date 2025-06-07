@@ -6,9 +6,9 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import { Card, CardContent } from "@/components/ui/card"
 
-export function ContactForm() {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,108 +16,70 @@ export function ContactForm() {
     message: "",
   })
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log("Form submitted:", formData)
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [e.target.name]: e.target.value,
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-
-    // Reset form after success
-    setTimeout(() => {
-      setSubmitSuccess(false)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      })
-    }, 3000)
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 shadow-lg">
-      <h3 className="text-xl font-bold text-[#0e2240] mb-4">Contáctanos</h3>
-
-      <div className="space-y-4">
-        <div>
-          <Label htmlFor="name" className="text-[#0e2240]">
-            Nombre
-          </Label>
-          <Input
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Tu nombre"
-            required
-            className="mt-1"
-          />
-        </div>
-
-        <div>
-          <Label htmlFor="email" className="text-[#0e2240]">
-            Correo electrónico
-          </Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="tu@email.com"
-            required
-            className="mt-1"
-          />
-        </div>
-
-        <div>
-          <Label htmlFor="phone" className="text-[#0e2240]">
-            Teléfono
-          </Label>
-          <Input
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Tu teléfono"
-            className="mt-1"
-          />
-        </div>
-
-        <div>
-          <Label htmlFor="message" className="text-[#0e2240]">
-            Mensaje
-          </Label>
-          <Textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="¿En qué podemos ayudarte?"
-            required
-            className="mt-1 min-h-[120px]"
-          />
-        </div>
-
-        <Button type="submit" className="w-full bg-[#1a62b3] hover:bg-[#1a62b3]/90 text-white" disabled={isSubmitting}>
-          {isSubmitting ? "Enviando..." : submitSuccess ? "¡Enviado!" : "Enviar mensaje"}
-        </Button>
-      </div>
-    </form>
+    <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+      <CardContent className="p-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+              required
+            />
+          </div>
+          <div>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              value={formData.email}
+              onChange={handleChange}
+              className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+              required
+            />
+          </div>
+          <div>
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Teléfono"
+              value={formData.phone}
+              onChange={handleChange}
+              className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+            />
+          </div>
+          <div>
+            <Textarea
+              name="message"
+              placeholder="Mensaje"
+              value={formData.message}
+              onChange={handleChange}
+              className="bg-white/20 border-white/30 text-white placeholder:text-white/70 min-h-[100px]"
+              required
+            />
+          </div>
+          <Button type="submit" className="w-full bg-white text-[#1a62b3] hover:bg-gray-100">
+            Enviar mensaje
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   )
 }

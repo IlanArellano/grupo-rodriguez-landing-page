@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 interface NewsCardProps {
   title: string
@@ -9,29 +9,29 @@ interface NewsCardProps {
   image: string
 }
 
-export function NewsCard({ title, date, excerpt, image }: NewsCardProps) {
-  // Generate a slug from the title
-  const slug = title
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "")
-
+export default function NewsCard({ title, date, excerpt, image }: NewsCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="relative h-48">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
-      </div>
-      <div className="p-6">
-        <div className="text-sm text-gray-500 mb-2">{date}</div>
-        <h3 className="text-xl font-bold text-[#0e2240] mb-2">{title}</h3>
-        <p className="text-gray-700 mb-4 line-clamp-3">{excerpt}</p>
-        <Link
-          href={`/noticias/${slug}`}
-          className="text-[#1a62b3] hover:underline inline-flex items-center font-medium"
-        >
-          Leer más <ChevronRight className="ml-1 h-4 w-4" />
-        </Link>
-      </div>
-    </div>
+    <Card className="group hover:shadow-lg transition-shadow duration-300">
+      <CardContent className="p-0">
+        <div className="relative h-48 overflow-hidden rounded-t-lg">
+          <Image
+            src={image || "/placeholder.svg"}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div className="p-6">
+          <p className="text-sm text-gray-500 mb-2">{date}</p>
+          <h3 className="text-lg font-bold text-[#0e2240] mb-3 group-hover:text-[#1a62b3] transition-colors">
+            {title}
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">{excerpt}</p>
+          <Link href="#" className="text-[#1a62b3] hover:underline text-sm font-medium">
+            Leer más →
+          </Link>
+        </div>
+      </CardContent>
+    </Card>
   )
 }

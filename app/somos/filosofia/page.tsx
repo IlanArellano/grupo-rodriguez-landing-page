@@ -1,9 +1,9 @@
-import Image from "next/image"
-import { ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { PageHeader } from "@/components/page-header"
-import { ParallaxSection } from "@/components/parallax-section"
-import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import PageHeader from "@/components/page-header";
+import ParallaxSection from "@/components/parallax-section";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function FilosofiaPage() {
   return (
@@ -12,7 +12,7 @@ export default function FilosofiaPage() {
         {/* Hero Section */}
         <PageHeader
           title="Filosofía GPA"
-          description="Conoce los principios y valores que guían nuestras acciones y decisiones en Grupo Punto Alto."
+          description="Conoce los principios y valores que guían nuestras acciones y decisiones en Grupo JC Rodríguez."
           backgroundImage="/placeholder.svg?height=1200&width=1920"
         />
 
@@ -21,22 +21,33 @@ export default function FilosofiaPage() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-[#0e2240] mb-6">Nuestra Filosofía</h2>
+                <h2 className="text-3xl font-bold text-[#0e2240] mb-6">
+                  Nuestra Filosofía
+                </h2>
                 <p className="text-gray-700 mb-6">
-                  En Grupo Punto Alto, nuestra filosofía empresarial se basa en un conjunto de principios y valores que
-                  guían nuestras acciones y decisiones en todos los niveles de la organización. Creemos firmemente que
-                  el éxito sostenible se construye sobre una base sólida de ética, excelencia e innovación.
+                  En Grupo Jc Rodriguez creemos que nuestro éxito empresarial es
+                  por la adaptabilidad a las nuevas tendencias y tecnologías
+                  para fortalecer el crecimiento profesional de nuestros
+                  colaboradores, proveedores y clientes.
                 </p>
                 <p className="text-gray-700">
-                  Nuestro enfoque integral nos permite ofrecer soluciones de alta calidad que satisfacen las necesidades
-                  de nuestros clientes, mientras contribuimos positivamente al desarrollo de las comunidades donde
-                  operamos y al bienestar de nuestros colaboradores.
+                  Somos un conglomerado empresarial con alta influencia en el
+                  desarrollo económico, social y ambiental de nuestro pais
+                  gracias a la sinergia que hacemos con nuestras empresas,
+                  colaboradores y aliados estratégicos.
+                </p>
+                <p className="text-gray-700">
+                  Creemos que el respecto, la honestidad, la responsabilidad y
+                  lealtad son valores éticos y sociales indispensables en
+                  nuestras actividades por lo cual promovemos el compromiso y
+                  trabajo en equipo para el bien común de las ciudades donde
+                  laboramos.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/placeholder.svg?height=800&width=600"
-                  alt="Equipo de Grupo Punto Alto"
+                  alt="Equipo de Grupo JC Rodríguez"
                   fill
                   className="object-cover"
                 />
@@ -68,15 +79,16 @@ export default function FilosofiaPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0e2240] mb-4">Misión</h3>
+                  <h3 className="text-2xl font-bold text-[#0e2240] mb-4">
+                    Misión
+                  </h3>
                   <p className="text-gray-700 mb-4">
-                    Proporcionar soluciones integrales de alta calidad en los sectores de la construcción, inmobiliario,
-                    metalmecánico, aeronáutico y de servicios, superando las expectativas de nuestros clientes y
-                    generando valor para nuestros accionistas, colaboradores y la sociedad.
-                  </p>
-                  <p className="text-gray-700">
-                    Nos comprometemos a operar con los más altos estándares de calidad, seguridad y responsabilidad
-                    social, contribuyendo al desarrollo sostenible de las comunidades donde tenemos presencia.
+                    Construir lazos de confianza con los clientes para
+                    contribuir al desarrollo de las industrias a nivel global y
+                    fomentar el desarrollo económico haciendo participes la
+                    cultura de seguridad y medio ambiente para fortalecer a
+                    sociedad aplicando en todas las áreas los más altos
+                    estándares de calidad
                   </p>
                 </CardContent>
               </Card>
@@ -98,18 +110,19 @@ export default function FilosofiaPage() {
                         strokeLinejoin="round"
                         d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
                       />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0e2240] mb-4">Visión</h3>
+                  <h3 className="text-2xl font-bold text-[#0e2240] mb-4">
+                    Visión
+                  </h3>
                   <p className="text-gray-700 mb-4">
-                    Ser un grupo empresarial líder y referente en los sectores donde operamos, reconocido por nuestra
-                    excelencia, innovación y compromiso con el desarrollo sostenible.
-                  </p>
-                  <p className="text-gray-700">
-                    Aspiramos a expandir nuestra presencia nacional e internacional, diversificar nuestras operaciones y
-                    consolidarnos como una organización que transforma positivamente la industria y la sociedad a través
-                    de soluciones innovadoras y prácticas empresariales responsables.
+                    Ser reconocidos a nivel nacional e internacional por proveer
+                    soluciones adaptables a la industria en general.
                   </p>
                 </CardContent>
               </Card>
@@ -121,10 +134,13 @@ export default function FilosofiaPage() {
         <section className="py-16 px-4 md:px-6 bg-white">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0e2240] mb-4">Nuestros Valores</h2>
+              <h2 className="text-3xl font-bold text-[#0e2240] mb-4">
+                Nuestros Valores
+              </h2>
               <p className="text-gray-700 max-w-3xl mx-auto">
-                Los valores de Grupo Punto Alto son los pilares fundamentales que definen nuestra cultura organizacional
-                y guían nuestro comportamiento en todas las actividades que realizamos.
+                Los valores de Grupo JC Rodríguez son los pilares fundamentales
+                que definen nuestra cultura organizacional y guían nuestro
+                comportamiento en todas las actividades que realizamos.
               </p>
             </div>
 
@@ -152,8 +168,9 @@ export default function FilosofiaPage() {
                     Excelencia
                   </h3>
                   <p className="text-gray-700">
-                    Buscamos la excelencia en todo lo que hacemos, superando expectativas y estableciendo nuevos
-                    estándares de calidad en nuestros productos, servicios y procesos.
+                    Buscamos la excelencia en todo lo que hacemos, superando
+                    expectativas y estableciendo nuevos estándares de calidad en
+                    nuestros productos, servicios y procesos.
                   </p>
                 </CardContent>
               </Card>
@@ -181,8 +198,9 @@ export default function FilosofiaPage() {
                     Innovación
                   </h3>
                   <p className="text-gray-700">
-                    Fomentamos la innovación y la creatividad para encontrar soluciones únicas a los desafíos más
-                    complejos, adaptándonos constantemente a un entorno empresarial en evolución.
+                    Fomentamos la innovación y la creatividad para encontrar
+                    soluciones únicas a los desafíos más complejos, adaptándonos
+                    constantemente a un entorno empresarial en evolución.
                   </p>
                 </CardContent>
               </Card>
@@ -210,8 +228,9 @@ export default function FilosofiaPage() {
                     Colaboración
                   </h3>
                   <p className="text-gray-700">
-                    Creemos en el poder del trabajo en equipo y la colaboración para lograr resultados extraordinarios,
-                    valorando la diversidad de perspectivas y experiencias.
+                    Creemos en el poder del trabajo en equipo y la colaboración
+                    para lograr resultados extraordinarios, valorando la
+                    diversidad de perspectivas y experiencias.
                   </p>
                 </CardContent>
               </Card>
@@ -239,8 +258,9 @@ export default function FilosofiaPage() {
                     Integridad
                   </h3>
                   <p className="text-gray-700">
-                    Actuamos con honestidad, transparencia y ética en todas nuestras relaciones comerciales y
-                    personales, manteniendo los más altos estándares de conducta empresarial.
+                    Actuamos con honestidad, transparencia y ética en todas
+                    nuestras relaciones comerciales y personales, manteniendo
+                    los más altos estándares de conducta empresarial.
                   </p>
                 </CardContent>
               </Card>
@@ -273,8 +293,10 @@ export default function FilosofiaPage() {
                     Compromiso
                   </h3>
                   <p className="text-gray-700">
-                    Nos comprometemos plenamente con nuestros clientes, colaboradores, accionistas y comunidades,
-                    asumiendo la responsabilidad de nuestras acciones y cumpliendo nuestras promesas.
+                    Nos comprometemos plenamente con nuestros clientes,
+                    colaboradores, accionistas y comunidades, asumiendo la
+                    responsabilidad de nuestras acciones y cumpliendo nuestras
+                    promesas.
                   </p>
                 </CardContent>
               </Card>
@@ -302,8 +324,10 @@ export default function FilosofiaPage() {
                     Sostenibilidad
                   </h3>
                   <p className="text-gray-700">
-                    Promovemos el desarrollo sostenible en todas nuestras operaciones, buscando el equilibrio entre el
-                    crecimiento económico, el bienestar social y la protección del medio ambiente.
+                    Promovemos el desarrollo sostenible en todas nuestras
+                    operaciones, buscando el equilibrio entre el crecimiento
+                    económico, el bienestar social y la protección del medio
+                    ambiente.
                   </p>
                 </CardContent>
               </Card>
@@ -315,137 +339,40 @@ export default function FilosofiaPage() {
         <ParallaxSection
           imageUrl="/placeholder.svg?height=1200&width=1920"
           title="Nuestra cultura organizacional"
-          description="En Grupo Punto Alto, fomentamos una cultura organizacional basada en el respeto, la colaboración y el desarrollo continuo, creando un ambiente de trabajo positivo donde cada colaborador puede alcanzar su máximo potencial."
+          description="En Grupo JC Rodríguez, fomentamos una cultura organizacional basada en el respeto, la colaboración y el desarrollo continuo, creando un ambiente de trabajo positivo donde cada colaborador puede alcanzar su máximo potencial."
           ctaText="Conoce nuestro equipo"
           ctaLink="/somos/equipo"
           colorBox="blue"
         />
 
-        {/* Principios Estratégicos */}
-        <section className="py-16 px-4 md:px-6 bg-gray-50">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#0e2240] mb-4">Principios Estratégicos</h2>
-              <p className="text-gray-700 max-w-3xl mx-auto">
-                Nuestros principios estratégicos definen el enfoque que adoptamos para alcanzar nuestros objetivos y
-                crear valor a largo plazo para todos nuestros grupos de interés.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0e2240] mb-4">Enfoque en el Cliente</h3>
-                <p className="text-gray-700 mb-4">
-                  Colocamos a nuestros clientes en el centro de todo lo que hacemos, comprendiendo sus necesidades y
-                  superando sus expectativas con soluciones innovadoras y de alta calidad.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Relaciones a largo plazo basadas en la confianza</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Soluciones personalizadas para cada cliente</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Mejora continua de nuestros productos y servicios</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0e2240] mb-4">Excelencia Operativa</h3>
-                <p className="text-gray-700 mb-4">
-                  Buscamos la excelencia en todos nuestros procesos y operaciones, optimizando recursos y maximizando la
-                  eficiencia para ofrecer el mejor valor a nuestros clientes.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Procesos estandarizados y eficientes</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Adopción de tecnologías avanzadas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Gestión basada en datos y resultados medibles</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0e2240] mb-4">Desarrollo del Talento</h3>
-                <p className="text-gray-700 mb-4">
-                  Invertimos en el desarrollo profesional y personal de nuestros colaboradores, creando un ambiente de
-                  trabajo que fomenta el crecimiento, la innovación y el bienestar.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Programas de capacitación y desarrollo continuo</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Cultura de reconocimiento y valoración del talento</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Promoción del equilibrio entre vida laboral y personal</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0e2240] mb-4">Responsabilidad Social</h3>
-                <p className="text-gray-700 mb-4">
-                  Asumimos nuestra responsabilidad con la sociedad y el medio ambiente, contribuyendo activamente al
-                  desarrollo sostenible de las comunidades donde operamos.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Programas de impacto social en nuestras comunidades</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Prácticas empresariales sostenibles y respetuosas con el medio ambiente
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-[#1a62b3] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Alianzas estratégicas para maximizar nuestro impacto positivo</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="py-16 px-4 md:px-6 bg-[#1a62b3]">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Únete a nuestra filosofía</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Únete a nuestra filosofía
+            </h2>
             <p className="text-white/90 mb-8 max-w-3xl mx-auto">
-              En Grupo Punto Alto, buscamos personas que compartan nuestra filosofía y valores, y que quieran contribuir
-              a nuestra misión de proporcionar soluciones integrales de alta calidad que transformen positivamente la
-              industria y la sociedad.
+              En Grupo JC Rodríguez, buscamos personas que compartan nuestra
+              filosofía y valores, y que quieran contribuir a nuestra misión de
+              proporcionar soluciones integrales de alta calidad que transformen
+              positivamente la industria y la sociedad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-[#1a62b3] hover:bg-gray-100">
-                Oportunidades de carrera <ChevronRight className="ml-2 h-4 w-4" />
+                Oportunidades de carrera{" "}
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                Conoce nuestro código de ética <ChevronRight className="ml-2 h-4 w-4" />
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
+                Conoce nuestro código de ética{" "}
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
         </section>
       </main>
     </div>
-  )
+  );
 }

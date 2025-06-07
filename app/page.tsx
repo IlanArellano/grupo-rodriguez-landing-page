@@ -4,12 +4,14 @@ import { ChevronRight } from "lucide-react";
 import { Facebook, Linkedin, Mail, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { SectorCard } from "@/components/sector-card";
-import { NewsCard } from "@/components/news-card";
-import { ContactForm } from "@/components/contact-form";
-import { HeroSlider } from "@/components/hero-slider";
-import { ParallaxSection } from "@/components/parallax-section";
-import { ParallaxSection2 } from "@/components/parallax-section-2";
+import SectorCard from "@/components/sector-card";
+import NewsCard from "@/components/news-card";
+import HeroSlider from "@/components/hero-slider";
+import ParallaxSection from "@/components/parallax-section";
+import ParallaxSection2 from "@/components/parallax-section-2";
+import CounterSection from "@/components/counter-section";
+import ContactSection from "@/components/contact-section";
+import StylizedLogo from "@/components/stylized-logo";
 
 export default function Home() {
   return (
@@ -42,7 +44,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-[#0e2240] mb-6">
-                  Grupo Punto Alto
+                  Grupo JC Rodríguez
                 </h2>
                 <p className="text-gray-700 mb-6">
                   Somos un grupo empresarial con más de 20 años de experiencia,
@@ -63,7 +65,7 @@ export default function Home() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="https://mx.ternium.com/media/xhmljbyn/aceria_render.png?v=1d9a52f8a565560"
-                  alt="Grupo Punto Alto"
+                  alt="Grupo JC Rodríguez"
                   fill
                   className="object-cover"
                 />
@@ -72,11 +74,14 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Counter Section - Estadísticas animadas */}
+        <CounterSection />
+
         {/* Primera sección Parallax con efecto de zoom */}
         <ParallaxSection
           imageUrl="https://mx.ternium.com/media/awnn3p3y/tx_home_automotriz_03.jpg"
           title="Innovación y excelencia en cada proyecto"
-          description="En Grupo Punto Alto, combinamos tecnología de vanguardia con experiencia para ofrecer soluciones que superan las expectativas de nuestros clientes y establecen nuevos estándares en la industria."
+          description="En Grupo JC Rodríguez, combinamos tecnología de vanguardia con experiencia para ofrecer soluciones que superan las expectativas de nuestros clientes y establecen nuevos estándares en la industria."
           ctaText="Descubre nuestra tecnología"
           ctaLink="/tecnologia"
           colorBox="blue"
@@ -253,13 +258,13 @@ export default function Home() {
               </h2>
               <p className="text-gray-700 max-w-3xl mx-auto">
                 Mantente informado sobre las últimas novedades, logros y eventos
-                de Grupo Punto Alto.
+                de Grupo JC Rodríguez.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <NewsCard
-                title="Grupo Punto Alto inaugura nuevo complejo industrial"
+                title="Grupo JC Rodríguez inaugura nuevo complejo industrial"
                 date="15 de mayo, 2025"
                 excerpt="Con una inversión de más de 50 millones de dólares, inauguramos nuestro nuevo complejo industrial que generará más de 500 empleos directos."
                 image="https://mx.ternium.com/media/jwwjlg42/foto1.jpg?width=607&height=393&v=1dbc4e35b9d0900"
@@ -289,86 +294,69 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 px-4 md:px-6 bg-[#1a62b3]">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">
-                  ¿Tienes un proyecto en mente?
-                </h2>
-                <p className="text-white/90 mb-6">
-                  Nuestro equipo de expertos está listo para ayudarte a hacer
-                  realidad tu proyecto. Contáctanos hoy mismo para una consulta
-                  personalizada.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-[#1a62b3] hover:bg-gray-100">
-                    Contáctanos
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10"
-                  >
-                    Conoce nuestros servicios
-                  </Button>
-                </div>
-              </div>
-              <div>
-                <ContactForm />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Nueva sección de contacto con animaciones */}
+        <ContactSection />
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#0e2240] text-white py-12 px-4 md:px-6">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <footer className="bg-zinc-900 pt-16 pb-8">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
-              <Image
-                src="/images/logo.jpeg"
-                alt="Grupo Punto Alto"
-                width={150}
-                height={50}
-                className="mb-6"
-              />
-              <p className="text-gray-300 mb-4">
-                Soluciones integrales para proyectos a gran escala en los
-                sectores de la construcción, inmobiliario, metalmecánico,
-                aeronáutico y de servicios.
+              <StylizedLogo size="md" showText={true} className="mb-6" />
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Grupo Jc Rodriguez, es un conglomerado empresarial conformado
+                por empresas mexicanas con una amplia experiencia en todo tipo
+                de proyectos y servicios que traza una trayectoria empresarial
+                que envuelve una cultura de emprendimiento, innovación y
+                adaptabilidad, con los más altos estándares de calidad para
+                optimizar tiempos y costos, utilizando lo último en tecnología,
+                para brindar soluciones adaptables para los sectores primario,
+                secundario, terciario, cuaternario y quinario.
               </p>
               <div className="flex space-x-4">
-                <Link href="https://facebook.com" aria-label="Facebook">
-                  <Facebook className="h-5 w-5 text-white hover:text-[#1a62b3]" />
+                <Link
+                  href="#"
+                  aria-label="Facebook"
+                  className="text-gray-400 hover:text-[#1a62b3] transition-colors"
+                >
+                  <Facebook size={20} />
                 </Link>
-                <Link href="https://linkedin.com" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5 text-white hover:text-[#1a62b3]" />
+                <Link
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="text-gray-400 hover:text-[#1a62b3] transition-colors"
+                >
+                  <Linkedin size={20} />
                 </Link>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4">Enlaces Rápidos</h3>
-              <ul className="space-y-2">
+              <h3 className="text-lg font-semibold mb-6 text-white">
+                Enlaces rápidos
+              </h3>
+              <ul className="space-y-3">
                 <li>
-                  <Link href="/" className="text-gray-300 hover:text-white">
+                  <Link
+                    href="/"
+                    className="text-gray-400 hover:text-[#1a62b3] transition-colors"
+                  >
                     Inicio
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/somos"
-                    className="text-gray-300 hover:text-white"
+                    className="text-gray-400 hover:text-[#1a62b3] transition-colors"
                   >
                     Somos
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/sectores"
-                    className="text-gray-300 hover:text-white"
+                    href="/sectores-estrategicos"
+                    className="text-gray-400 hover:text-[#1a62b3] transition-colors"
                   >
                     Sectores Estratégicos
                   </Link>
@@ -376,7 +364,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="/capital-humano"
-                    className="text-gray-300 hover:text-white"
+                    className="text-gray-400 hover:text-[#1a62b3] transition-colors"
                   >
                     Capital Humano
                   </Link>
@@ -384,90 +372,54 @@ export default function Home() {
                 <li>
                   <Link
                     href="/noticias"
-                    className="text-gray-300 hover:text-white"
+                    className="text-gray-400 hover:text-[#1a62b3] transition-colors"
                   >
                     Noticias
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/contacto"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Contacto
-                  </Link>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6 text-white">
+                Contáctanos
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <Phone className="mr-3 h-5 w-5 text-[#1a62b3] mt-0.5" />
+                  <span className="text-gray-400">557 501 35 15</span>
+                </li>
+                <li className="flex items-start">
+                  <Mail className="mr-3 h-5 w-5 text-[#1a62b3] mt-0.5" />
+                  <span className="text-gray-400">
+                    jrodriguez@gporodriguez.com
+                  </span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4">Sectores</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/sectores-estrategicos/construccion"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Construcción
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/sectores-estrategicos/inmobiliario"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Inmobiliario
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/sectores-estrategicos/metalmecanico"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Metalmecánico
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/sectores-estrategicos/aeronautico"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Aeronáutico
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/sectores-estrategicos/servicios"
-                    className="text-gray-300 hover:text-white"
-                  >
-                    Servicios
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contacto</h3>
-              <address className="not-italic text-gray-300">
-                <p className="mb-2">Av. Principal #1234</p>
-                <p className="mb-2">Chihuahua, Chihuahua, México</p>
-                <p className="mb-2">CP 31000</p>
-                <p className="mb-4">
-                  <Phone className="h-4 w-4 inline mr-2" />
-                  +52 (614) 439.39.55
-                </p>
-                <p>
-                  <Mail className="h-4 w-4 inline mr-2" />
-                  contacto@gpa.mx
-                </p>
-              </address>
+              <h3 className="text-lg font-semibold mb-6 text-white">Boletín</h3>
+              <p className="text-gray-400 mb-4">
+                Suscríbete para recibir noticias y actualizaciones.
+              </p>
+              <form className="space-y-4">
+                <input
+                  type="email"
+                  placeholder="Tu correo electrónico"
+                  className="w-full px-4 py-3 rounded-full bg-zinc-800 border border-zinc-700 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a62b3]"
+                />
+                <Button className="w-full bg-[#1a62b3] hover:bg-[#0e2240] rounded-full">
+                  Suscribirse
+                </Button>
+              </form>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
+          <div className="border-t border-zinc-800 pt-8 text-center text-gray-500 text-sm">
             <p>
-              © {new Date().getFullYear()} Grupo Punto Alto. Todos los derechos
-              reservados.
+              © Grupo JC Rodríguez {new Date().getFullYear()} | Todos los
+              derechos reservados
             </p>
           </div>
         </div>
